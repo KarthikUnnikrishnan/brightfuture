@@ -5,9 +5,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BrightFuture</title>
-    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images\favicon.ico' %}"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="{% static '\css\home.css' %}" />
   </head>
   <body>
-    <h1>Welcome to BrightFuture</h1>
+    <nav>
+      <div class="logo">
+        <a href="#"
+          ><img
+            src="{% static 'images\logo-top.svg' %}"
+            alt="BrightFuture"
+            style="width: 250px; height: auto"
+        /></a>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">How It's Works</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
   </body>
 </html>
