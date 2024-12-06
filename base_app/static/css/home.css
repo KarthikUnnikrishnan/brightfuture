@@ -1,8 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@font-face {
+    font-family: 'bjola';
+    src: url(./bjola.ttf) format('truetype');
+  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  
 
 html {
     scroll-behavior: smooth;
+}
+
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -22,16 +34,19 @@ ul {
     margin-right: 40px;
 }
 
-a {
+nav a {
     text-decoration: none;
-    color: #E0E2DB;
+    color: #ffffff;
     font-weight: 500;
     font-size: 20px;
-    transition: color 0.3s ease;
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 1px solid transparent;
 }
 
-a:hover {
-    color: #FFFFFF;
+nav a:hover {
+    color: #a4c868;
+    border-bottom: 1px solid #a4c868;
 }
 
 nav {
@@ -41,4 +56,47 @@ nav {
     padding: 0 85px;
     margin: 40px 120px;
     border-radius: 20px;
+}
+
+section {
+    display: flex;
+    padding: 0 10%;
+    justify-content: space-between;
+}
+
+.home-left-main-title01, .home-left-main-title02 {
+    margin: 0;
+    font-family: 'bjola', sans-serif;
+    white-space: pre-wrap;
+    font-size: 130px;
+}
+
+.home-left-main-title01 {
+    color: #67A97B;
+}
+
+.home-left-main-title02 {
+    color: #2E3532;
+    margin-left: 50px;
+    margin-bottom: 40px;
+}
+
+.home-left .home-left-para {
+    font-family: 'Poppins', 'Roboto';
+    width: 80%;
+    font-size: 18px;
+    color: #000000;
+}
+
+span {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.home-right {
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+    margin-top: 80px;
+    gap: 20px;
 }
