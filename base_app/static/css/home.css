@@ -4,10 +4,12 @@
     src: url(./bjola.ttf) format('truetype');
   }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-  
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 
 html {
-    --s: 200px; /* control the size*/
+    scroll-behavior: smooth;
+    --s: 150px; /* control the size*/
     --c1: rgba(255, 255, 255, 0.55); /* White with 50% opacity */
     --c2: rgba(224, 226, 219, 0.55); /* Light gray with 50% opacity */
 
@@ -35,6 +37,23 @@ body {
     font-family: 'Roboto',Arial, Helvetica, sans-serif;
 }
 
+section {
+  display: flex;
+  padding: 0 10%;
+  justify-content: space-between;
+  margin-top: 200px;
+}
+
+.section-heading {
+  font-family: 'Montserrat';
+  font-weight: 900;
+  text-align: center;
+  font-size: 50px;
+  color: #2E3532;
+  margin-bottom: 50px;
+  text-decoration: underline;
+}
+
 ul {
     list-style-type: none;
     display: flex;
@@ -59,20 +78,18 @@ nav a:hover {
 }
 
 nav {
-    position: sticky;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
     display: flex;
     justify-content: space-between;
     background-color: #2E3532;
     padding: 0 80px;
-    margin: 40px 120px;
-    margin-bottom: 80px;
-    border-radius: 20px;
-}
-
-section {
-    display: flex;
-    padding: 0 10%;
-    justify-content: space-between;
+    margin: 0; 
+    border-radius: 20px; 
+    z-index: 1000; 
+    transition: margin 0.25s ease, border-radius 0.25s ease, background-color 0.25s ease;
 }
 
 .home-left-main-title01, .home-left-main-title02 {
@@ -117,21 +134,88 @@ span {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Align text and arrow to opposite ends */
-    padding: 15px 20px;
+    padding: 15px 15px;
     background-color: #2E3532;
     color: #ffffff;
     border-radius: 10px;
     font-size: 20px;
     font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-left: 80px;
   }
   
+  .btn:hover {
+    background-color: #4e855e;
+  }
+
+  .btn:active {
+    background-color: #2d5037;
+  }
+
+  .home-right .btn:hover > i {
+    translate: 8px;
+  }
+
   .btn i {
     margin-right: 10px;
     margin-left: 30px;
     font-size: 24px;
     color: #fff;
+    transition: all 0.3s ease;
   }
 
-  .home-right p {
+  .home-right-para {
     color: #2B3C35;
+    margin-left: 80px;
+
   }
+
+/* Why Choose Us Section Styiling */
+
+#why-choose-us{
+  margin-top: 150px;
+  display: block;
+}
+
+.box-container {
+  font-family: 'Poppins';
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.box-container div {
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  transition: background 0.5s ease, transform 0.5s ease;
+  margin-bottom: 500px;
+}
+
+.box-container div i {
+  font-size: 50px;
+}
+
+.box-container div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  transition: color 0.5s ease;
+}
+
+.box-container div p {
+  font-size: 20px;
+  text-align: start;
+}
+
+.box-container div:hover {
+  transform: translateY(-10px);
+}
+
+.box-container div:hover > h2{
+  color: #71c588;
+}
