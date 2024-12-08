@@ -115,9 +115,18 @@ nav {
   font-family: 'bjola', sans-serif;
   white-space: pre-wrap;
   font-size: 130px;
+  transition: color 0.2s ease;
 }
 
 .home-left-main-title01 {
+  color: #67A97B;
+}
+
+.home-left-main-title01:hover {
+  color: #2E3532;
+}
+
+.home-left-main-title01:hover + .home-left-main-title02 {
   color: #67A97B;
 }
 
@@ -154,7 +163,7 @@ span {
   justify-content: space-between; /* Align text and arrow to opposite ends */
   padding: 15px 15px;
   min-width: 350px; /* Adjust as necessary */
-  background-color: #2E3532;
+  background-color: #424242;
   color: #ffffff;
   border-radius: 10px;
   font-size: 20px;
