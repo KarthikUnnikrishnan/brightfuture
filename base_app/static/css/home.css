@@ -9,15 +9,15 @@
 
 html {
   scroll-behavior: smooth;
-  --s: 150px; /* control the size*/
-  --c1: rgba(255, 255, 255, 0.55); /* White with 50% opacity */
-  --c2: rgba(224, 226, 219, 0.55); /* Light gray with 50% opacity */
-
+  --s: 220px; /* control the size*/
+  --c1: rgba(238, 242, 245, 0.5); /* Adjusted opacity */
+  --c2: rgba(173, 186, 192, 0.5); /* Adjusted opacity */
+  
   --_g: var(--c1) 90deg, #0000 90.5deg;
   background:
-  conic-gradient(from -45deg, var(--_g)),
-  conic-gradient(from 135deg, var(--_g)) calc(var(--s)/2) 0,
-  var(--c2);
+   conic-gradient(from -45deg, var(--_g)),
+   conic-gradient(from 135deg, var(--_g)) calc(var(--s)/2) 0,
+   var(--c2);
   background-size: var(--s) var(--s);
 }
 
@@ -41,7 +41,22 @@ section {
 display: flex;
 padding: 0 10%;
 justify-content: space-between;
-margin-top: 200px;
+margin-top: 0px;
+}
+
+#home-section {
+  background-image: url('../images/background_01.jpg'); /* Adjust the path as necessary */
+  background-size: cover; /* This will cover the entire section */
+  background-position: bottom; /* This will center the image */
+  background-repeat: no-repeat; /* This prevents the image from repeating */
+  height: 100vh; /* Set height to cover the entire viewport */
+}
+
+.home-content {
+  padding-top: 150px; /* Add padding to push content below the navbar */
+  height: calc(100vh - 150px); /* Ensure content takes the remaining height */
+  display: flex; /* Maintain the flex layout */
+  justify-content: space-between; /* Keep the original layout */
 }
 
 .section-heading {
@@ -86,10 +101,13 @@ nav {
   justify-content: space-between;
   background-color: #2E3532;
   padding: 0 80px;
-  margin: 0; 
   border-radius: 20px; 
-  z-index: 1000; 
+  z-index: 1000;
   transition: margin 0.25s ease, border-radius 0.25s ease, background-color 0.25s ease;
+}
+
+.home-left {
+  margin-top: 40px;
 }
 
 .home-left-main-title01, .home-left-main-title02 {
@@ -126,7 +144,7 @@ span {
   display: flex;
   flex-direction: column;
   margin-right: 80px;
-  margin-top: 80px;
+  margin-top: 20px;
   gap: 20px;
 }
 
@@ -135,6 +153,7 @@ span {
   align-items: center;
   justify-content: space-between; /* Align text and arrow to opposite ends */
   padding: 15px 15px;
+  min-width: 350px; /* Adjust as necessary */
   background-color: #2E3532;
   color: #ffffff;
   border-radius: 10px;
@@ -168,13 +187,12 @@ span {
 .home-right-para {
   color: #2B3C35;
   margin-left: 80px;
-
 }
 
 /* Why Choose Us Section Styiling */
 
 #why-choose-us{
-margin-top: 150px;
+margin-top: 50px;
 display: block;
 }
 
