@@ -27,5 +27,5 @@ setTimeout(() => {
     loader.addEventListener("transitionend", () => {
         document.body.removeChild(loader);
     });
-}, 1500); // 1000 milliseconds = 1 seconds
+}, 1500); // 1500 milliseconds = 1.5 seconds
 });
