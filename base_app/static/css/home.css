@@ -65,7 +65,7 @@ font-weight: 900;
 text-align: center;
 font-size: 3.125rem;
 color: #2E3532;
-margin-bottom: 3.125rem;
+margin-bottom: 5%;
 text-decoration: underline;
 }
 
@@ -119,14 +119,6 @@ nav {
 }
 
 .home-left-main-title01 {
-  color: #67A97B;
-}
-
-.home-left-main-title01:hover {
-  color: #2E3532;
-}
-
-.home-left-main-title01:hover + .home-left-main-title02 {
   color: #67A97B;
 }
 
@@ -286,3 +278,7 @@ to {
   transform: rotate(1turn);
 }
 }
+
+/* Media Queries */
+
+@media screen () {}
