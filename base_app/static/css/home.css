@@ -398,6 +398,10 @@ to {
   cursor: pointer;
 }
 
+.about-btn a:active {
+  background-color: #2d5037;
+}
+
 .about-btn .about-btn-2 {
   background: #2E3532;
   color: white;
