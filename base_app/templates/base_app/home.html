@@ -31,6 +31,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -48,7 +54,7 @@
       </div>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#">Contact Us</a></li>
       </ul>
     </nav>
@@ -62,8 +68,25 @@
           <h1 class="home-left-main-title01">assisting</h1>
           <h1 class="home-left-main-title02">brilliance!</h1>
           <p class="home-left-para">
-            Need help choosing the <span>right course?</span> Worried about
-            <span>falling behind?.</span> Know your academic risk early.
+            Need help choosing the
+            <span
+              style="
+                color: #23492e;
+                text-decoration: underline;
+                font-style: italic;
+              "
+              >right course?</span
+            >
+            Worried about
+            <span
+              style="
+                color: #23492e;
+                text-decoration: underline;
+                font-style: italic;
+              "
+              >falling behind?.</span
+            >
+            Know your academic risk early.
           </p>
         </div>
         <div class="home-right">
@@ -88,7 +111,6 @@
 
     <!--Why Choose Us Section Started-->
     <section id="why-choose-us">
-      <h1 class="section-heading">Why Choose Us?</h1>
       <div class="box-container">
         <div>
           <i class="ri-git-repository-private-fill"></i>
@@ -116,6 +138,34 @@
             students engaged and motivated, improving their academic performance
             and reducing dropout risk.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+
+    <section class="about" id="about">
+      <div class="about-main">
+        <img src="{% static '\images\About.png' %}" alt="" />
+        <div class="about-all-text">
+          <h4>About Us</h4>
+          <h1>
+            A Hub for <span class="span-hover"> Academic </span> Excellence
+          </h1>
+          <p>
+            We're revolutionizing higher education with AI. Our cutting-edge
+            tools, fueled by machine learning models like Random Forest and
+            Logistic Regression, analyze vast datasets to predict and prevent
+            student dropouts and offer personalized course recommendations to
+            maximize student potential. By harnessing the power of AI, we're
+            shaping the future of education, one student at a time.
+          </p>
+          <div class="about-btn">
+            <a class="about-btn"> Learn More </a>
+            <a href="#home-section" class="about-btn about-btn-2"
+              >Let's Start</a
+            >
+          </div>
         </div>
       </div>
     </section>

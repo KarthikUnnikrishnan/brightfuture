@@ -26,7 +26,6 @@ html {
   text-decoration: none;
   margin: 0;
   padding: 0;
-  
 }
 
 body {
@@ -41,7 +40,6 @@ section {
 display: flex;
 padding: 0 10%;
 justify-content: space-between;
-margin-top: 0px;
 }
 
 /* Home Section Styling */
@@ -60,7 +58,6 @@ font-weight: 900;
 text-align: center;
 font-size: 3.125rem;
 color: #2E3532;
-margin-bottom: 5%;
 text-decoration: underline;
 }
 
@@ -149,15 +146,9 @@ nav {
 
 .home-left .home-left-para {
   font-family: 'Poppins', 'Roboto';
-  width: 80%;
+  width: 100%;
   font-size: 1.125rem;
   color: #000000;
-}
-
-span {
-  color: #23492e;
-  text-decoration: underline;
-  font-style: italic;
 }
 
 .btn {
@@ -205,14 +196,8 @@ span {
 /* Why Choose Us Section Styiling */
 
 #why-choose-us {
-  margin-top: 3.125rem;
+  margin-top: 1.5rem;
   display: block;
-}
-
-.section-heading {
-  animation: scrollReveal ease-in-out both;
-  animation-timeline: view();
-  animation-range: entry 0% cover 50%;
 }
 
 .box-container {
@@ -221,6 +206,7 @@ span {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 2.5rem;
   margin-top: 3.125rem;
+  margin-bottom: 3.125rem;
   animation: scrollReveal ease-in-out both;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
@@ -232,7 +218,6 @@ span {
   font-size: 0.8125rem;
   font-weight: 300;
   transition: background 0.5s ease, transform 0.5s ease;
-  margin-bottom: 31.25rem;
 }
 
 .box-container div i {
@@ -309,5 +294,137 @@ to {
   } to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* About Us Section Styling */
+
+.about {
+  background: white;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  color: #000000;
+  padding-top: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-main img {
+  width: 50%;
+  max-width: 100%; 
+  height: auto;
+  animation: scrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
+.about-all-text {
+  width: 50%;
+  padding-left: 20px;
+  text-align: left;
+  animation: scrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
+.about-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.about-all-text h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #777777;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.about-all-text h1 {
+  font-family: "Dosis", sans-serif;
+  font-size: 65px;
+  color: #2E3532;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.span-hover {
+  border-bottom: 3px solid black;
+  text-decoration: none;
+  font-style: italic;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-all-text h1:hover .span-hover {
+  color: #4e855e;
+  border-bottom: 3px solid #4e855e;
+}
+
+.about-all-text p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #777777;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+
+.about-btn a {
+  background: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #111111;
+  border: none;
+  outline: none;
+  box-shadow: 0px 16px 32px 0px rgb(0 0 0 / 6%);
+  border-radius: 10px;
+  margin-right: 20px;
+  transition:all .3s ease;
+}
+
+.about-btn a:hover {
+  background-color: #4e855e;
+  color: white;
+  cursor: pointer;
+}
+
+.about-btn .about-btn-2 {
+  background: #2E3532;
+  color: white;
+}
+
+
+
+
+/* Media Queries */
+@media screen and (max-width: 1250px) {
+  .about {
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
+  }
+  .about-all-text {
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 650px){
+  .about .about-main img {
+    margin-bottom: 35px;
+  }
+  .about-all-text h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
   }
 }
