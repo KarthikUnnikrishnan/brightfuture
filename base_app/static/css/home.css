@@ -623,6 +623,7 @@ textarea.input {
 }
 
 .icon {
+  color: #424242;
   width: 28px;
   margin-right: 0.7rem;
 }
@@ -783,4 +784,34 @@ textarea.input {
   .btn {
     padding: 0.45rem 1.2rem;
   }
+}
+
+
+/* Footer Section Styling */
+
+.footer {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 50px 0;
+  background-color: #fff;
+  color: #353535;
+}
+.footer .header a img {
+  width: 30rem;
+}
+.footer .nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #414141;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer .nav a:hover {
+  color: #a4c868;
+}
+.footer .footer-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
 }

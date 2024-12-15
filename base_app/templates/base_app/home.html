@@ -23,6 +23,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -190,16 +194,20 @@
 
           <div class="info">
             <div class="information">
-              <img src="{% static 'img/location.png' %}" class="icon" alt="" />
-              <p>92 Cherry Drive Uniondale, NY 11553</p>
+              <img
+                src="{% static 'images/location.png' %}"
+                class="icon"
+                alt=""
+              />
+              <p>CyberTower, Ernakulam, Kerala, India - 683556</p>
             </div>
             <div class="information">
-              <img src="{% static 'img/email.png' %}" class="icon" alt="" />
-              <p>lorem@ipsum.com</p>
+              <img src="{% static 'images/email.png' %}" class="icon" alt="" />
+              <p>karthikunnikrishnan.dev@gmail.com</p>
             </div>
             <div class="information">
-              <img src="{% static 'img/phone.png' %}" class="icon" alt="" />
-              <p>123-456-789</p>
+              <img src="{% static 'images/phone.png' %}" class="icon" alt="" />
+              <p>+91 9037922004</p>
             </div>
           </div>
 
@@ -262,6 +270,26 @@
         </div>
       </div>
     </div>
+
+    <!-- Footer Section -->
+
+    <footer class="footer">
+      <div class="header">
+        <a href="#"
+          ><img src="{% static 'images/logo-footer.svg' %}" alt=""
+        /></a>
+      </div>
+      <div class="nav">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#why-choose-us">Why Choose Us?</a>
+      </div>
+      <div class="footer-text">
+        © BrightFuture. All Rights Reserved. Created By karthik Unnikrishnan
+      </div>
+    </footer>
+
     <!-- Linking Javascript File -->
     <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
   </body>
