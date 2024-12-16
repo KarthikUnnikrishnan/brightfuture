@@ -50,7 +50,7 @@
 
   <body>
     <!-- Page Loader -->
-    <div class="loader"></div>
+    <div class="loader" id="page-loader"></div>
     <!-- Header and Navbar Started-->
     <nav id="navbar">
       <div class="logo">
@@ -99,7 +99,7 @@
           </p>
         </div>
         <div class="home-right">
-          <a class="home-btn" href="#">
+          <a class="home-btn" href="{% url 'dropout_prediction' %}">
             Dropout Prediction
             <i class="ri-arrow-right-line"></i>
           </a>

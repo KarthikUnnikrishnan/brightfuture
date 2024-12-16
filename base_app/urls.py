@@ -2,5 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.test, name='test')
+    path('', views.home, name='home'),
+    path('dropout-prediction/', views.dropout_prediction, name='dropout_prediction'),
 ]
