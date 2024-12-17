@@ -51,6 +51,64 @@
   <body>
     <!-- Page Loader -->
     <div class="loader" id="page-loader"></div>
+
+    <!-- Popup Modal -->
+    <div id="popupModal" class="modal" id="modal">
+      <div class="modal-content">
+        <div class="top-form">
+          <div class="close-modal">&#10006;</div>
+        </div>
+        <div class="form-header">
+          <h3>Dropout Prediction Form</h3>
+        </div>
+        <form action="#">
+          <div class="input_box">
+            <label for="1st-internal">1st Internal Mark</label>
+            <input
+              type="text"
+              id="1st-internal"
+              placeholder="Enter 1st internal mark"
+              required
+            />
+          </div>
+          <div class="input_box">
+            <label for="2nd-internal">2nd Internal Mark</label>
+            <input
+              type="text"
+              id="2nd-internal"
+              placeholder="Enter 2nd internal mark"
+              required
+            />
+          </div>
+          <div class="input_box">
+            <label for="tuition-input"
+              >Is Your Tuition Fee Up-To-Date (Yes / No)</label
+            >
+            <input
+              type="text"
+              id="tuition-input"
+              placeholder="Enter Yes / No"
+              required
+            />
+          </div>
+          <div class="input_box">
+            <label for="attendence-input"
+              >Is Your Attendance Greater Than 75% (Yes / No)</label
+            >
+            <input
+              type="text"
+              id="attendence-input"
+              placeholder="Enter Yes / No"
+              required
+            />
+          </div>
+          <button type="submit" class="btn">
+            Predict Now <i class="ri-arrow-right-line"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
     <!-- Header and Navbar Started-->
     <nav id="navbar">
       <div class="logo">
@@ -99,7 +157,7 @@
           </p>
         </div>
         <div class="home-right">
-          <a class="home-btn" href="{% url 'dropout_prediction' %}">
+          <a class="home-btn" id="drop-btn" href="#">
             Dropout Prediction
             <i class="ri-arrow-right-line"></i>
           </a>

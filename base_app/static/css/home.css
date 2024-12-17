@@ -42,6 +42,209 @@ padding: 0 10%;
 justify-content: space-between;
 }
 
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background: #e6ecf0;
+  padding: 10px 0px 20px 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  min-width: 50%;
+  max-width: 100%;
+  height: auto;
+}
+
+.top-form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top-form .close-modal {
+  color: #111111;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.form-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #353535;
+}
+
+form .input_box label {
+  color: #111111;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Input field styling */
+form .input_box input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #DADAF2;
+  border-radius: 5px;
+  outline: none;
+  background: #F8F8FB;
+  font-size: 17px;
+  padding: 0px 20px;
+  margin-bottom: 25px;
+  transition: 0.2s ease;
+}
+
+form .input_box input:focus {
+  border-color: #67A97B;
+}
+
+form .input_box .password_title {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+form .input_box {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #626cd6;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Login button styling */
+form button {
+  width: 100%;
+  padding: 10px 20px;
+  height: 56px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: rgb(96, 170, 119);
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 28px;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background: rgb(46, 87, 59);
+}
+
+/* Button Glow Effect */
+form .btn {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  width: 100%;
+  padding: 10px 10px;
+  height: 56px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: rgb(96, 170, 119);
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+  color: #FFF;
+  position: relative;
+  z-index: 0;
+}
+
+.btn i {
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* glow */
+.btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #1c2322, #373d3c, #495b58, #57736f,
+    #2e3a44, #161312, #787167, #414232
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  /* filter: blur(8px); */
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+/* hover */
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:active {
+  color: #fff;
+}
+
+
+
 /* Home Section Styling */
 
 #home-section {
@@ -177,14 +380,16 @@ nav {
 }
 
 .home-btn:hover {
+  text-decoration: none;
   background-color: #4e855e;
 }
 
 .home-btn:active {
+  text-decoration: none;
   background-color: #2d5037;
 }
 
-.home-right .btn:hover > i {
+.home-right .home-btn:hover > i {
   translate: 0.5rem;
 }
 
