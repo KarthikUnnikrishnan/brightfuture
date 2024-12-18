@@ -52,14 +52,14 @@
     <!-- Page Loader -->
     <div class="loader" id="page-loader"></div>
 
-    <!-- Popup Modal -->
-    <div class="modal" id="modal">
-      <div class="modal-content">
+    <!-- Dropout Popup Modal -->
+    <div class="dropout-modal" id="dropout-modal">
+      <div class="dropout-modal-content">
         <div class="top-form">
           <div class="close-modal" id="close-modal">&#10006;</div>
         </div>
         <div class="form-header">
-          <h3>Dropout Prediction Form</h3>
+          <h3>Dropout Prediction</h3>
         </div>
         <form action="#">
           <div class="input_box">
@@ -100,6 +100,56 @@
           </div>
           <button type="submit" class="btn">
             Predict Now <i class="ri-arrow-right-line"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Course Recommendation Popup Modal -->
+    <div class="course-modal" id="course-modal">
+      <div class="course-modal-content">
+        <div class="top-form">
+          <div class="close-modal" id="close-modal">&#10006;</div>
+        </div>
+        <div class="form-header">
+          <h3>Course Recommendation</h3>
+        </div>
+        <form action="#">
+          <div class="input_box">
+            <label for="field-of-interest"
+              >Field of interests (e.g., Data Science, Business, AI)</label
+            >
+            <input
+              type="text"
+              id="field-of-interest"
+              placeholder="Enter field of interest"
+              required
+            />
+          </div>
+          <div class="input_box">
+            <label for="skills-input"
+              >Skills (e.g., Python, Machine Learning)</label
+            >
+            <input
+              type="text"
+              id="skills-input"
+              placeholder="Enter skills"
+              required
+            />
+          </div>
+          <div class="input_box">
+            <label for="current-course-input"
+              >Currently enrolled course (leave blank if none)</label
+            >
+            <input
+              type="text"
+              id="skills-input"
+              placeholder="Enter current course"
+            />
+          </div>
+
+          <button type="submit" class="btn">
+            Recommend Now <i class="ri-arrow-right-line"></i>
           </button>
         </form>
       </div>
@@ -157,7 +207,7 @@
             Dropout Prediction
             <i class="ri-arrow-right-line"></i>
           </a>
-          <a class="home-btn" href="#">
+          <a class="home-btn" id="course-btn" href="#">
             Course Recommendation
             <i class="ri-arrow-right-line"></i>
           </a>
@@ -301,8 +351,8 @@
             <h3 class="title">Contact us</h3>
             <div class="input-container">
               <input type="text" name="name" class="input" />
-              <label for="">Username</label>
-              <span>Username</span>
+              <label for="">Name</label>
+              <span>Name</span>
             </div>
             <div class="input-container">
               <input type="email" name="email" class="input" />

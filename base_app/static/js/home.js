@@ -51,35 +51,68 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 });
 
-/* Modal Script */
+/* Dropout courseModal Script */
 
 document.addEventListener("DOMContentLoaded", function() {
-  const dropoutBtn = document.getElementById('drop-btn');
+  const courseBtn = document.getElementById('drop-btn');
   const closeBtn = document.getElementById('close-modal');
-  const modal = document.getElementById('modal');
+  const courseModal = document.getElementById('dropout-modal');
 
-  dropoutBtn.addEventListener("click", () => {
-      modal.style.display = 'flex'; // Set display to flex before adding the open class
+  courseBtn.addEventListener("click", () => {
+      courseModal.style.display = 'flex'; // Set display to flex before adding the open class
       setTimeout(() => {
-          modal.classList.add("open"); // Add the open class after display is set
+          courseModal.classList.add("open"); // Add the open class after display is set
       }, 10); // Small timeout to allow the display change to take effect
   });
 
   closeBtn.addEventListener("click", () => {
-      modal.classList.remove("open");
-      // Wait for the fade-out transition to complete before hiding the modal
+      courseModal.classList.remove("open");
+      // Wait for the fade-out transition to complete before hiding the courseModal
       setTimeout(() => {
-          modal.style.display = 'none'; // Hide the modal after fade-out
+          courseModal.style.display = 'none'; // Hide the courseModal after fade-out
       }, 500); // Match this duration with the CSS transition duration
   });
 
-  // Optional: Hide the modal when clicking outside of it
+  // Optional: Hide the courseModal when clicking outside of it
   window.addEventListener("click", (event) => {
-      if (event.target === modal) {
-          modal.classList.remove("open");
+      if (event.target === courseModal) {
+          courseModal.classList.remove("open");
           setTimeout(() => {
-              modal.style.display = 'none';
+              courseModal.style.display = 'none';
           }, 500);
       }
   });
 });
+
+/* Dropout courseModal Script */
+
+document.addEventListener("DOMContentLoaded", function() {
+    const courseBtn = document.getElementById('course-btn');
+    const closeBtn = document.getElementById('close-modal');
+    const courseModal = document.getElementById('course-modal');
+  
+    courseBtn.addEventListener("click", () => {
+        courseModal.style.display = 'flex'; // Set display to flex before adding the open class
+        setTimeout(() => {
+            courseModal.classList.add("open"); // Add the open class after display is set
+        }, 10); // Small timeout to allow the display change to take effect
+    });
+  
+    closeBtn.addEventListener("click", () => {
+        courseModal.classList.remove("open");
+        // Wait for the fade-out transition to complete before hiding the courseModal
+        setTimeout(() => {
+            courseModal.style.display = 'none'; // Hide the courseModal after fade-out
+        }, 500); // Match this duration with the CSS transition duration
+    });
+  
+    // Optional: Hide the courseModal when clicking outside of it
+    window.addEventListener("click", (event) => {
+        if (event.target === courseModal) {
+            courseModal.classList.remove("open");
+            setTimeout(() => {
+                courseModal.style.display = 'none';
+            }, 500);
+        }
+    });
+  });
