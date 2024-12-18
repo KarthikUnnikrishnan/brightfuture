@@ -53,10 +53,10 @@
     <div class="loader" id="page-loader"></div>
 
     <!-- Popup Modal -->
-    <div id="popupModal" class="modal" id="modal">
+    <div class="modal" id="modal">
       <div class="modal-content">
         <div class="top-form">
-          <div class="close-modal">&#10006;</div>
+          <div class="close-modal" id="close-modal">&#10006;</div>
         </div>
         <div class="form-header">
           <h3>Dropout Prediction Form</h3>
@@ -81,26 +81,22 @@
             />
           </div>
           <div class="input_box">
-            <label for="tuition-input"
-              >Is Your Tuition Fee Up-To-Date (Yes / No)</label
-            >
-            <input
-              type="text"
-              id="tuition-input"
-              placeholder="Enter Yes / No"
-              required
-            />
+            <label for="tuition-input">Is Your Tuition Fee Up-To-Date?</label>
+            <select id="tuition-input" required>
+              <option value="" disabled selected>Select Yes or No</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
           </div>
           <div class="input_box">
-            <label for="attendence-input"
-              >Is Your Attendance Greater Than 75% (Yes / No)</label
+            <label for="tuition-input"
+              >Is Your Attendance Greater Than 75%?</label
             >
-            <input
-              type="text"
-              id="attendence-input"
-              placeholder="Enter Yes / No"
-              required
-            />
+            <select id="tuition-input" required>
+              <option value="" disabled selected>Select Yes or No</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
           </div>
           <button type="submit" class="btn">
             Predict Now <i class="ri-arrow-right-line"></i>
@@ -240,7 +236,7 @@
     <!-- Contact Us Section -->
     <div class="contact" id="contact">
       <span class="big-circle"></span>
-      <img src="img/shape.png" class="square" alt="" />
+      <img src="{% static 'images/shape.png' %}" class="square" alt="" />
       <div class="form">
         <div class="contact-info">
           <h3 class="title">Let's get in touch</h3>
@@ -323,7 +319,7 @@
               <label for="">Message</label>
               <span>Message</span>
             </div>
-            <input type="submit" value="Send" class="btn" />
+            <input type="submit" value="Send" class="contact-send-btn" />
           </form>
         </div>
       </div>
