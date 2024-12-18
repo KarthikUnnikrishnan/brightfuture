@@ -36,6 +36,31 @@ body {
   font-family: 'Roboto',Arial, Helvetica, sans-serif;
 }
 
+/* Scroll to Top Button Styling */
+.scroll-to-top-btn{
+  font-size: 20px;
+  height: 45px;
+  width: 45px;
+  background-color: #2e3a44;
+  border: none;
+  color: white;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border: 2px solid #2e3a44;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  display: none;
+  z-index: 9999999;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.scroll-to-top-btn:hover {
+  background-color: transparent;
+  color: #2e3a44;
+}
+
 section {
 display: flex;
 padding: 0 10%;
@@ -130,6 +155,7 @@ justify-content: space-between;
 }
 
 .top-form .close-modal {
+  margin-right: 10px;
   color: #111111;
   cursor: pointer;
   font-size: 20px;

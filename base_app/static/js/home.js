@@ -59,21 +59,19 @@ document.addEventListener("DOMContentLoaded", function() {
   const courseModal = document.getElementById('dropout-modal');
 
   courseBtn.addEventListener("click", () => {
-      courseModal.style.display = 'flex'; // Set display to flex before adding the open class
+      courseModal.style.display = 'flex';
       setTimeout(() => {
-          courseModal.classList.add("open"); // Add the open class after display is set
-      }, 10); // Small timeout to allow the display change to take effect
+          courseModal.classList.add("open");
+      }, 10);
   });
 
   closeBtn.addEventListener("click", () => {
       courseModal.classList.remove("open");
-      // Wait for the fade-out transition to complete before hiding the courseModal
       setTimeout(() => {
-          courseModal.style.display = 'none'; // Hide the courseModal after fade-out
-      }, 500); // Match this duration with the CSS transition duration
+          courseModal.style.display = 'none';
+      }, 500);
   });
 
-  // Optional: Hide the courseModal when clicking outside of it
   window.addEventListener("click", (event) => {
       if (event.target === courseModal) {
           courseModal.classList.remove("open");
@@ -92,21 +90,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const courseModal = document.getElementById('course-modal');
   
     courseBtn.addEventListener("click", () => {
-        courseModal.style.display = 'flex'; // Set display to flex before adding the open class
+        courseModal.style.display = 'flex';
         setTimeout(() => {
-            courseModal.classList.add("open"); // Add the open class after display is set
-        }, 10); // Small timeout to allow the display change to take effect
+            courseModal.classList.add("open");
+        }, 10);
     });
   
     closeBtn.addEventListener("click", () => {
         courseModal.classList.remove("open");
-        // Wait for the fade-out transition to complete before hiding the courseModal
         setTimeout(() => {
-            courseModal.style.display = 'none'; // Hide the courseModal after fade-out
-        }, 500); // Match this duration with the CSS transition duration
+            courseModal.style.display = 'none';
+        }, 500);
     });
   
-    // Optional: Hide the courseModal when clicking outside of it
     window.addEventListener("click", (event) => {
         if (event.target === courseModal) {
             courseModal.classList.remove("open");
@@ -116,3 +112,21 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
   });
+
+
+/* Scroll to Top Script */
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if($(window).scrollTop()>300){
+	    $('.scroll-to-top-btn').fadeIn(250);
+	}
+	else{
+	    $('.scroll-to-top-btn').fadeOut(250);
+	}
+    });
+    $('.scroll-to-top-btn').click(function(){
+	$('html,body').animate(
+	    {scrollTop:0},50
+	);
+    });
+});
