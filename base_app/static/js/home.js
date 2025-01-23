@@ -51,65 +51,63 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 });
 
-/* Dropout courseModal Script */
-
+// Dropout courseModal Script
 document.addEventListener("DOMContentLoaded", function() {
-  const courseBtn = document.getElementById('drop-btn');
-  const closeBtn = document.getElementById('close-modal');
-  const courseModal = document.getElementById('dropout-modal');
-
-  courseBtn.addEventListener("click", () => {
-      courseModal.style.display = 'flex';
-      setTimeout(() => {
-          courseModal.classList.add("open");
-      }, 10);
-  });
-
-  closeBtn.addEventListener("click", () => {
-      courseModal.classList.remove("open");
-      setTimeout(() => {
-          courseModal.style.display = 'none';
-      }, 500);
-  });
-
-  window.addEventListener("click", (event) => {
-      if (event.target === courseModal) {
-          courseModal.classList.remove("open");
-          setTimeout(() => {
-              courseModal.style.display = 'none';
-          }, 500);
-      }
-  });
-});
-
-/* Dropout courseModal Script */
-
-document.addEventListener("DOMContentLoaded", function() {
-    const courseBtn = document.getElementById('course-btn');
-    const closeBtn = document.getElementById('close-modal');
-    const courseModal = document.getElementById('course-modal');
+    const courseBtn = document.getElementById('drop-btn');
+    const closeBtn = document.getElementById('close-dropout-modal');
+    const courseModal = document.getElementById('dropout-modal');
   
     courseBtn.addEventListener("click", () => {
-        courseModal.style.display = 'flex';
-        setTimeout(() => {
-            courseModal.classList.add("open");
-        }, 10);
+      courseModal.style.display = 'flex';
+      setTimeout(() => {
+        courseModal.classList.add("open");
+      }, 10);
     });
   
     closeBtn.addEventListener("click", () => {
-        courseModal.classList.remove("open");
-        setTimeout(() => {
-            courseModal.style.display = 'none';
-        }, 500);
+      courseModal.classList.remove("open");
+      setTimeout(() => {
+        courseModal.style.display = 'none';
+      }, 500);
     });
   
     window.addEventListener("click", (event) => {
-        if (event.target === courseModal) {
-            courseModal.classList.remove("open");
-            setTimeout(() => {
-                courseModal.style.display = 'none';
-            }, 500);
-        }
+      if (event.target === courseModal) {
+        courseModal.classList.remove("open");
+        setTimeout(() => {
+          courseModal.style.display = 'none';
+        }, 500);
+      }
+    });
+  });
+  
+  // Course Recommendation courseModal Script
+  document.addEventListener("DOMContentLoaded", function() {
+    const courseBtn = document.getElementById('course-btn');
+    const closeBtn = document.getElementById('close-course-modal');
+    const courseModal = document.getElementById('course-modal');
+  
+    courseBtn.addEventListener("click", () => {
+      courseModal.style.display = 'flex';
+      setTimeout(() => {
+        courseModal.classList.add("open");
+      }, 10);
+    });
+  
+    closeBtn.addEventListener("click", () => {
+      courseModal.classList.remove("open");
+      setTimeout(() => {
+        courseModal.style.display = 'none';
+      }, 500);
+    });
+  
+    window.addEventListener("click", (event) => {
+      if (event.target === courseModal) {
+        courseModal.classList.remove("open");
+        setTimeout(() => {
+          courseModal.style.display = 'none';
+        }, 500);
+      }
     });
   });
 
