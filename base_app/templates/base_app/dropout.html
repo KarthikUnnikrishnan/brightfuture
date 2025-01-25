@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrightFuture - Know Your Risk Early</title>
+    <!-- Linking favicon.ico -->
+    <link
+      rel="shortcut icon"
+      href="{% static 'images\favicon.ico' %}"
+      type="image/x-https://loading.io/asset/767819icon"
+    />
+    <!-- Linking CSS -->
+    <link rel="stylesheet" href="{% static '\css\home.css' %}" />
+    <!-- Linking Remixicons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top-btn">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+    <!-- Page Loader -->
+    <div class="loader" id="page-loader"></div>
+
+    <!-- Dropout Popup Modal -->
+    <div class="dropout-modal" id="dropout-modal">
+      <div class="dropout-modal-content">
+        <div class="top-form">
+          <div class="close-modal" id="close-dropout-modal">&#10006;</div>
+        </div>
+        <div class="form-header">
+          <h3>Dropout Prediction Result</h3>
+        </div>
+        {% if prediction %}
+        <div class="prediction-result">
+          <h3>You are likely to graduate. Keep Going!</h3>
+        </div>
+        {% else %}
+        <div class="prediction-result">
+          <h3>Sorry, You are likely to dropout. Seek help!</h3>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Header and Navbar Started-->
+    <nav id="navbar">
+      <div class="logo">
+        <a href="#"
+          ><img
+            src="{% static 'images\logo-top.svg' %}"
+            alt="BrightFuture"
+            style="width: 250px; height: auto"
+        /></a>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Header and Navbar Ended-->
+    <!-- Home Section Started-->
+    <section id="home-section">
+      <div class="home-content">
+        <!-- New wrapper div -->
+        <div class="home-left">
+          <h1 class="home-left-main-title01">assisting</h1>
+          <h1 class="home-left-main-title02">brilliance!</h1>
+          <p class="home-left-para">
+            Need help choosing the
+            <span
+              style="
+                color: #23492e;
+                text-decoration: underline;
+                font-style: italic;
+              "
+              >right course?</span
+            >
+            Worried about
+            <span
+              style="
+                color: #23492e;
+                text-decoration: underline;
+                font-style: italic;
+              "
+              >falling behind?.</span
+            >
+            Know your academic risk early.
+          </p>
+        </div>
+        <div class="home-right">
+          <a class="home-btn" id="drop-btn" href="#">
+            Dropout Prediction
+            <i class="ri-arrow-right-line"></i>
+          </a>
+          <a class="home-btn" id="course-btn" href="#">
+            Course Recommendation
+            <i class="ri-arrow-right-line"></i>
+          </a>
+          {% comment %}
+          <p class="home-right-para">
+            Note: While filling the details, make sure that all the details are
+            correctly filled.
+          </p>
+          {% endcomment %}
+        </div>
+      </div>
+    </section>
+    <!-- Home Section Ended-->
+
+    <!-- Linking Javascript File -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/dropout.js' %}"></script>
+    <script
+      type="text/javascript"
+      src="{% static 'js/drop_modal.js' %}"
+    ></script>
+  </body>
+</html>

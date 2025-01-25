@@ -8,18 +8,16 @@ def home(request, prediction=None):
 
 def predict_dropout(request):
     prediction = None
+    model = joblib.load('ml_models\dropout_prediction\dropout_model.joblib')
+    
     if request.method == 'POST':
         first_internal = request.POST.get('1st-internal')
         second_internal = request.POST.get('2nd-internal')
         tuition_status = request.POST.get('tuition-input')
         attendance_status = request.POST.get('attendence-input')
 
-        # Data Preparation
-        input_data = [[first_internal, second_internal, tuition_status, attendance_status]]
-
         # Making prediction
-        model = joblib.load('ml_models/dropout_prediction/dropout-model.joblib')
-        prediction = model.predict(input_data)
+        prediction = model.predict([[first_internal,second_internal,tuition_status,attendance_status]])
 
         # Render home.html with prediction result
-        return render(request, 'base_app/home.html', {'prediction': prediction[0]})
+    return render(request, 'base_app/dropout.html', {'prediction': prediction})
