@@ -147,6 +147,45 @@ form .input_box label {
   margin-bottom: 8px;
 }
 
+/* Modal Content Styling */
+#dropout-gif {
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.true-prediction-result {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.true-prediction-result h3 {
+  line-height: 2.3rem;
+  font-size: 1.5rem;
+  color: #2E3532;
+  margin-bottom: 30px;
+}
+
+.false-prediction-result {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.false-prediction-result h3 {
+  line-height: 2.3rem;
+  font-size: 1.5rem;
+  color: #2E3532;
+  padding: 0 30px;
+  margin-bottom: 30px;
+}
+
+#graduate-span{
+  text-decoration: underline;
+  color:#006c1f;
+}
+
 /* Home Section Styling */
 
 #home-section {
