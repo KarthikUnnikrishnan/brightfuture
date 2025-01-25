@@ -383,7 +383,7 @@ nav {
   padding: 0 5rem;
   border-radius: 1.25rem; 
   z-index: 1000;
-  transition: margin 0.25s ease, border-radius 0.25s ease, background-color 0.25s ease;
+  transition: margin 0.20s ease, border-radius 0.20s ease, background-color 0.20s ease;
 }
 
 .home-content {
