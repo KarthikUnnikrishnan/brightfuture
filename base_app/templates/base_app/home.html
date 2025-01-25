@@ -65,7 +65,12 @@
         <div class="form-header">
           <h3>Dropout Prediction</h3>
         </div>
-        <form action="#">
+        <form
+          action="{% url 'predict_dropout' %}"
+          method="post"
+          id="dropout-form"
+        >
+          {% csrf_token %}
           <div class="input_box">
             <label for="1st-internal">1st Internal Mark</label>
             <input
@@ -93,10 +98,10 @@
             </select>
           </div>
           <div class="input_box">
-            <label for="tuition-input"
+            <label for="attendence-input"
               >Is Your Attendance Greater Than 75%?</label
             >
-            <select id="tuition-input" required>
+            <select id="attendence-input" required>
               <option value="" disabled selected>Select Yes or No</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -106,6 +111,12 @@
             Predict Now <i class="ri-arrow-right-line"></i>
           </button>
         </form>
+
+        {% if prediction %}
+        <div class="prediction-result">
+          <h3>Prediction Result: {{ prediction }}</h3>
+        </div>
+        {% endif %}
       </div>
     </div>
 
@@ -401,5 +412,9 @@
     <!-- Linking Javascript File -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+    <script
+      type="text/javascript"
+      src="{% static 'js/drop_modal.js' %}"
+    ></script>
   </body>
 </html>
