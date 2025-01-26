@@ -77,6 +77,7 @@
             <span style="font-size: 150%; color: #8e1616">♥</span>
           </h3>
         </div>
+        <a href="{% url 'home' %}" id="modal-home-btn">BACK TO HOME</a>
         {% else %}
         <div class="form-header">
           <img
@@ -94,6 +95,7 @@
             <span style="font-size: 150%; color: #8e1616">♥</span>
           </h3>
         </div>
+        <a href="{% url 'home' %}" id="modal-home-btn">BACK TO HOME</a>
         {% endif %}
       </div>
     </div>
@@ -154,12 +156,6 @@
             Course Recommendation
             <i class="ri-arrow-right-line"></i>
           </a>
-          {% comment %}
-          <p class="home-right-para">
-            Note: While filling the details, make sure that all the details are
-            correctly filled.
-          </p>
-          {% endcomment %}
         </div>
       </div>
     </section>
