@@ -10,16 +10,15 @@ window.addEventListener("load", () => {
 });
 
 /* Navbar expands and shrinking */
-
 window.onload = function() {
     scrollFunction(); 
-    };
-    
-    window.onscroll = function() {
+};
+
+window.onscroll = function() {
     scrollFunction();
-    };
-    
-    function scrollFunction() {
+};
+
+function scrollFunction() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         document.getElementById("navbar").style.margin = "0";
         document.getElementById("navbar").style.borderRadius = "0";
@@ -27,14 +26,19 @@ window.onload = function() {
         document.getElementById("navbar").style.margin = "40px 120px";
         document.getElementById("navbar").style.borderRadius = "20px";
     }
-    }
-
+}
 
 // Dropout courseModal Script
 document.addEventListener("DOMContentLoaded", function() {
     const courseBtn = document.getElementById('drop-btn');
     const closeBtn = document.getElementById('close-dropout-modal');
     const courseModal = document.getElementById('dropout-modal');
+
+    // Open the modal automatically when the page loads
+    courseModal.style.display = 'flex';
+    setTimeout(() => {
+        courseModal.classList.add("open");
+    }, 10);
 
     courseBtn.addEventListener("click", () => {
         courseModal.style.display = 'flex';
@@ -61,4 +65,3 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-

@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('predict/', views.predict_dropout, name='predict_dropout'),
+    path('dropout-prediction/', views.predict_dropout, name='predict_dropout'),
 ]
