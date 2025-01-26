@@ -11,10 +11,20 @@ def predict_dropout(request):
     model = joblib.load('ml_models/dropout_prediction/dropout_model.joblib')
     
     if request.method == 'POST':
-        first_internal = request.POST.get('1st-internal')
-        second_internal = request.POST.get('2nd-internal')
+        first_internal = float(request.POST.get('1st-internal'))
+        second_internal = float(request.POST.get('2nd-internal'))
         tuition_status = request.POST.get('tuition-input')
         attendance_status = request.POST.get('attendence-input')
+        
+        if (tuition_status == 'yes'):
+            tuition_status = 1
+        else:
+            tuition_status = 0
+        if (attendance_status == 'yes'):
+            attendance_status = 1
+        else:
+            attendance_status =0
+        
 
         # Making prediction
         prediction = model.predict([[first_internal, second_internal, tuition_status, attendance_status]])

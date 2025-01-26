@@ -209,8 +209,8 @@ ul {
   list-style-type: none;
   display: flex;
   align-items: center;
-  gap: 2.5rem;
-  margin-right: 2.5rem;
+  gap: 2.5rem; /* Adjust spacing between items */
+  margin-right: 2.5rem; /* Adjust margin as needed */
 }
 
 nav a {

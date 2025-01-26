@@ -9,6 +9,26 @@ window.addEventListener("load", () => {
     }, 1500); // 1500 milliseconds = 1.5 seconds
 });
 
+/* Navbar expands and shrinking */
+
+window.onload = function() {
+    scrollFunction(); 
+    };
+    
+    window.onscroll = function() {
+    scrollFunction();
+    };
+    
+    function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("navbar").style.margin = "0";
+        document.getElementById("navbar").style.borderRadius = "0";
+    } else {
+        document.getElementById("navbar").style.margin = "40px 120px";
+        document.getElementById("navbar").style.borderRadius = "20px";
+    }
+    }
+
 
 // Dropout courseModal Script
 document.addEventListener("DOMContentLoaded", function() {
