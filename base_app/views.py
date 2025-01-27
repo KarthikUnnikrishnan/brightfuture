@@ -25,8 +25,8 @@ def predict_dropout(request):
             attendance_status =0
         
 
-        # Check if the sum of grades is less than 3
-        if (first_internal + second_internal) < 3:
+        # Check if the sum of grades is less than 2
+        if (first_internal + second_internal) < 2:
             prediction = 0
         else:
             # Making prediction
