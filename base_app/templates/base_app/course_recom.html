@@ -57,20 +57,26 @@
         <div class="top-form">
           <div class="close-modal" id="close-dropout-modal">&#10006;</div>
         </div>
-        {% if recommendations %}
-                <h3>Recommended Courses:</h3>
-                <ul>
-                    {% for course in recommendations %}
-                      <li>
-                          <strong>Title:</strong> {{ course.Title }}<br>
-                          <button class="rec"><a href="{{ course.URL }}">Link</a></button>
-                      </li>
-                    {% endfor %}
-                </ul>
-              {% else %}
-                <p>No courses found matching your input.</p>
-              {% endif %}
-        <a href="{% url 'home' %}" id="modal-home-btn">BACK TO HOME</a>
+        <div class="course-result">
+          {% if recommendations %}
+            <div class="recom-result-header">
+              <h3>Recommended Courses:</h3>
+            </div>
+            <ul>
+              {% for course in recommendations %}
+                <li>
+                  <div class="course-title">{{ course.Title }}</div>
+                  <a href="{{ course.URL }}" class="course-link" target = "_blank">Visit Now</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p>No courses found matching your input.</p>
+          {% endif %}
+          <div class="modal-home-button-div">
+            <a href="{% url 'home' %}" id="modal-home-btn">BACK TO HOME</a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -84,7 +90,7 @@
             style="width: 250px; height: auto"
         /></a>
       </div>
-      <ul>
+      <ul class="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact Us</a></li>

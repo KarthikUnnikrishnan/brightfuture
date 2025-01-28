@@ -38,6 +38,58 @@ justify-content: space-between;
 
 /* Modal Styles */
 
+.recom-result-header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.course-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: #000000;
+}
+
+.course-result ul {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.course-result li {
+  display: flex;
+  align-items: center;
+}
+
+.course-title {
+  background-color: #F8F8FB;
+  padding: 10px; 
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 600px;
+  max-width: 600px;
+  margin-right: 10px;
+}
+
+
+.course-link {
+  padding: 10px 20px;
+  background-color: #547b94; 
+  color: white; 
+  text-decoration: none; 
+  border-radius: 5px; 
+  transition: background-color 0.3s;
+}
+
+.course-link:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
 .course-modal {
   position: fixed;
   top: 0;
@@ -177,37 +229,11 @@ form .input_box label {
   cursor: pointer;
 }
 
-.true-prediction-result {
+.modal-home-button-div {
   display: flex;
+  align-items: center;
   justify-content: center;
-  text-align: center;
-}
-
-.true-prediction-result h3 {
-  line-height: 2.3rem;
-  font-size: 1.5rem;
-  color: #2E3532;
-  margin-bottom: 30px;
-}
-
-.false-prediction-result {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.false-prediction-result h3 {
-  line-height: 2.3rem;
-  font-size: 1.5rem;
-  color: #2E3532;
-  padding: 0 30px;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-#graduate-span{
-  text-decoration: underline;
-  color:#006c1f;
+  margin: 10px 0;
 }
 
 /* Home Section Styling */
@@ -233,8 +259,7 @@ ul {
   list-style-type: none;
   display: flex;
   align-items: center;
-  gap: 2.5rem; /* Adjust spacing between items */
-  margin-right: 2.5rem; /* Adjust margin as needed */
+  gap: 2.5rem;
 }
 
 nav a {
