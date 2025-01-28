@@ -1,5 +1,7 @@
 from django.shortcuts import render
 import joblib
+import pandas as pd
+from .recommender import CourseRecommender
 
 # Create your views here.
 def home(request, prediction=None):
@@ -7,7 +9,7 @@ def home(request, prediction=None):
 
 def predict_dropout(request):
     prediction = None
-    model = joblib.load('ml_models/dropout_prediction/dropout_model.joblib')
+    predict_model = joblib.load('ml_models/dropout_prediction/dropout_model.joblib')
     
     if request.method == 'POST':
         first_internal = float(request.POST.get('1st-internal'))
@@ -30,6 +32,30 @@ def predict_dropout(request):
             prediction = 0
         else:
             # Making prediction
-            prediction = model.predict([[attendance_status,tuition_status,first_internal,second_internal]])
+            prediction = predict_model.predict([[attendance_status,tuition_status,first_internal,second_internal]])
 
     return render(request, 'base_app/dropout.html', {'prediction': prediction})
+
+def course_recom (request):
+    recommendations = None
+    
+    # load the dataset
+    courses_df = pd.read_csv('ml_models/course_recommendation/online_courses_data (Final).csv')
+    recom_model = CourseRecommender(courses_df)
+
+    if request.method == 'POST':
+        field_of_interest = request.POST.get('field-of-interest')
+        skills_input = request.POST.get('skills-input')
+        skills = skills_input.split(',') if skills_input else []
+        enrolled_courses_input = request.POST.get('current-course-input')
+        enrolled_courses = enrolled_courses_input.split(',') if enrolled_courses_input else []
+
+        recommendations = recom_model.recommend_courses(
+            field_of_interest,
+            skills,
+            enrolled_courses if enrolled_courses else None
+        )
+
+        return render(request, 'base_app/course_recom.html', {'recommendations': recommendations.to_dict(orient='records')})
+
+    return render(request, 'base_app/course_recom.html')

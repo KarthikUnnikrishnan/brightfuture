@@ -12,7 +12,7 @@
       type="image/x-https://loading.io/asset/767819icon"
     />
     <!-- Linking CSS -->
-    <link rel="stylesheet" href="{% static '\css\dropout.css' %}" />
+    <link rel="stylesheet" href="{% static '\css\course_recom.css' %}" />
     <!-- Linking Remixicons-->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
@@ -46,9 +46,6 @@
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"
       rel="stylesheet"
     />
-    <!-- Linking Lottiee Player -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  </head>
 
   <body>
     <!-- Page Loader -->
@@ -60,43 +57,20 @@
         <div class="top-form">
           <div class="close-modal" id="close-dropout-modal">&#10006;</div>
         </div>
-        {% if prediction %}
-        <div class="form-header">
-          <img
-            id="dropout-gif"
-            src="{% static 'images\graduate.gif' %}"
-            alt="Computer man"
-            style="width: 200x; height: 200px"
-          />
-        </div>
-        <div class="true-prediction-result">
-          <h3>
-            You're crushing it! <span id="graduate-span">Graduation</span> is
-            within reach! <br />
-            Keep going, you've got this!
-            <span style="font-size: 150%; color: #8e1616">♥</span>
-          </h3>
-        </div>
+        {% if recommendations %}
+                <h3>Recommended Courses:</h3>
+                <ul>
+                    {% for course in recommendations %}
+                      <li>
+                          <strong>Title:</strong> {{ course.Title }}<br>
+                          <button class="rec"><a href="{{ course.URL }}">Link</a></button>
+                      </li>
+                    {% endfor %}
+                </ul>
+              {% else %}
+                <p>No courses found matching your input.</p>
+              {% endif %}
         <a href="{% url 'home' %}" id="modal-home-btn">BACK TO HOME</a>
-        {% else %}
-        <div class="form-header">
-          <img
-            id="no_dropout-gif"
-            src="{% static 'images\no_graduate.gif' %}"
-            alt="Computer man"
-            style="width: 200x; height: 200px"
-          />
-        </div>
-        <div class="false-prediction-result">
-          <h3>
-            Graduation may be <span id="graduate-span">difficult</span> to
-            achieve.With effort and support, <br />you can overcome challenges
-            and achieve your goals.
-            <span style="font-size: 150%; color: #8e1616">♥</span>
-          </h3>
-        </div>
-        <a href="{% url 'home' %}" id="modal-home-btn">BACK TO HOME</a>
-        {% endif %}
       </div>
     </div>
 
@@ -163,6 +137,9 @@
 
     <!-- Linking Javascript File -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="{% static 'js/dropout.js' %}"></script>
+    <script
+      type="text/javascript"
+      src="{% static 'js/course_recom.js' %}"
+    ></script>
   </body>
 </html>

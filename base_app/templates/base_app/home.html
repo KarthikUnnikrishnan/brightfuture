@@ -131,7 +131,8 @@
         <div class="form-header">
           <h3>Course Recommendation</h3>
         </div>
-        <form action="#">
+        <form action="{% url 'course_recom' %}" method="post">
+          {% csrf_token %}
           <div class="input_box">
             <label for="field-of-interest"
               >Field of interests (e.g., Data Science, Business, AI)</label
@@ -139,6 +140,7 @@
             <input
               type="text"
               id="field-of-interest"
+              name="field-of-interest"
               placeholder="Enter field of interest"
               required
             />
@@ -150,6 +152,7 @@
             <input
               type="text"
               id="skills-input"
+              name="skills-input"
               placeholder="Enter skills"
               required
             />
@@ -160,7 +163,8 @@
             >
             <input
               type="text"
-              id="skills-input"
+              id="current-course-input"
+              name="current-course-input"
               placeholder="Enter current course"
             />
           </div>
@@ -414,9 +418,5 @@
     <!-- Linking Javascript File -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
-    <script
-      type="text/javascript"
-      src="{% static 'js/drop_modal.js' %}"
-    ></script>
   </body>
 </html>
