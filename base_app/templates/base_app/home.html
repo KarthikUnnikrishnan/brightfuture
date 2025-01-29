@@ -394,7 +394,46 @@
               <label for="">Message</label>
               <span>Message</span>
             </div>
-            <input type="submit" value="Send" class="contact-send-btn" />
+            <input
+              type="submit"
+              value="Send"
+              class="contact-send-btn"
+              id="send-button"
+            />
+            <script>
+              document
+                .getElementById("contact-form")
+                .addEventListener("submit", function (event) {
+                  event.preventDefault();
+
+                  // Change cursor to wait
+                  document.body.style.cursor = "wait";
+
+                  // Simulate sending the message (you can replace this with actual AJAX call)
+                  const formData = new FormData(this);
+                  fetch(this.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                      "X-Requested-With": "XMLHttpRequest",
+                    },
+                  })
+                    .then((response) => {
+                      // Revert cursor back to default
+                      document.body.style.cursor = "default";
+                      if (response.ok) {
+                        alert("Message sent successfully!");
+                      } else {
+                        alert("Failed to send the message. Please try again.");
+                      }
+                    })
+                    .catch((error) => {
+                      // Revert cursor back to default
+                      document.body.style.cursor = "default";
+                      alert("An error occurred. Please try again.");
+                    });
+                });
+            </script>
           </form>
         </div>
       </div>

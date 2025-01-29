@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.conf import settings
 import joblib
-import sweetify
 import pandas as pd
 from .recommender import CourseRecommender
 
@@ -68,7 +67,7 @@ def send_email(request):
         email = request.POST['email']
         phone = request.POST['phone']
         message = request.POST['message']
-        subject = f"Contact Form Submission from {name}"
+        subject = f"Enquiry from BrightFuture - {name}"
         
         # send email
         send_mail(
