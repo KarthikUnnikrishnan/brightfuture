@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.core.mail import send_mail
+from django.conf import settings
 import joblib
+import sweetify
 import pandas as pd
 from .recommender import CourseRecommender
 
@@ -26,7 +29,6 @@ def predict_dropout(request):
         else:
             attendance_status =0
         
-
         # Check if the sum of grades is less than 2
         if (first_internal + second_internal) < 2:
             prediction = 0
@@ -59,3 +61,24 @@ def course_recom (request):
         return render(request, 'base_app/course_recom.html', {'recommendations': recommendations.to_dict(orient='records')})
 
     return render(request, 'base_app/course_recom.html')
+
+def send_email(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        message = request.POST['message']
+        subject = f"Contact Form Submission from {name}"
+        
+        # send email
+        send_mail(
+            subject,
+            message,
+            settings.DEFAULT_FROM_EMAIL,
+            [settings.CONTACT_EMAIL],
+            fail_silently=False,
+        )
+        
+        return redirect('home')
+    
+    return redirect('home')

@@ -371,7 +371,8 @@
           <span class="circle one"></span>
           <span class="circle two"></span>
 
-          <form autocomplete="off" method="POST">
+          <form method="POST" action="{% url 'send_email' %}" id="contact-form">
+            {% csrf_token %}
             <h3 class="title">Contact us</h3>
             <div class="input-container">
               <input type="text" id="name" name="name" class="input" />

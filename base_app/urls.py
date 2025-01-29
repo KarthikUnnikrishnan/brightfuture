@@ -5,4 +5,5 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('dropout-prediction/', views.predict_dropout, name='predict_dropout'),
     path('course-recommendation', views.course_recom, name='course_recom'),
+    path('send-email/', views.send_email, name='send_email'),
 ]
