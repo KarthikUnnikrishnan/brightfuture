@@ -6,7 +6,7 @@ import pandas as pd
 from .recommender import CourseRecommender
 
 # Create your views here.
-def home(request, prediction=None):
+def base_home(request, prediction=None):
     return render(request, 'base_app/home.html', {'prediction': prediction})
 
 def predict_dropout(request):
