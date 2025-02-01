@@ -539,6 +539,113 @@ transform: translateY(-10px);
 color: #71c588;
 }
 
+/* Note Taking App section */
+
+#note-taking-secton{
+  background-color: #F5F7F8;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  padding-top: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.note-taking-main img {
+  width: 50%;
+  max-width: 100%; 
+  height: auto;
+  animation: scrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
+.note-taking-all-text {
+  width: 50%;
+  padding-left: 20px;
+  text-align: left;
+  animation: scrollReveal ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
+.note-taking-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.note-taking-all-text h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #777777;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.note-taking-all-text h1 {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 75px;
+  color: #2E3532;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+#note-taking-inro-span {
+  font-family: "Dosis", sans-serif;
+  font-size: 40px;
+}
+
+.note-taking-all-text h1:hover .span-hover {
+  color: #4e855e;
+  border-bottom: 3px solid #4e855e;
+}
+
+.note-taking-all-text p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #535353;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+
+.note-taking-btn a {
+  background: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #111111;
+  border: none;
+  outline: none;
+  box-shadow: 0px 16px 32px 0px rgb(0 0 0 / 6%);
+  border-radius: 10px;
+  margin-right: 20px;
+  transition:all .3s ease;
+}
+
+.note-taking-btn a:hover {
+  background-color: #3e3e3e;
+  color: white;
+  cursor: pointer;
+}
+
+.note-taking-btn a:active {
+  background-color: #2d5037;
+}
+
+
+
 /* About Us Section Styling */
 
 .about {

@@ -31,6 +31,8 @@ def predict_dropout(request):
         # Check if the sum of grades is less than 2
         if (first_internal + second_internal) < 2:
             prediction = 0
+        elif attendance_status == 0:
+            prediction = 0
         else:
             # Making prediction
             prediction = predict_model.predict([[attendance_status,tuition_status,first_internal,second_internal]])
