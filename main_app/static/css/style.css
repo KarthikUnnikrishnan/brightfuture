@@ -7,8 +7,8 @@
   --sky-blu: #d6e0e2;
   --blu-pop: #c1e0e6;
   --blu-pop-lt: #d6f3f9;
-  --blu-pop-bright: #37adc5;
-  --blu-pop-med: #01849b;
+  --blu-pop-bright: #4C585B;
+  --blu-pop-med: rgb(69, 122, 86);
   --cream: #f4efe6;
   --green: #5e6c5b;
   --off-wht: #fefcf6;
@@ -27,7 +27,14 @@
 
 body {
   background-color: var(--sky-blu);
-  font-family: var(--body-font);
+  font-family: 'Roboto',Arial, Helvetica, sans-serif;
+}
+* {
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 a {
