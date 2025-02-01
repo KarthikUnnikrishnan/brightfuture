@@ -191,6 +191,7 @@
       </div>
       <ul>
         <li><a href="#">Home</a></li>
+        <li><a href={% url "home" %}>Note Taking App</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact Us</a></li>
       </ul>
@@ -298,7 +299,7 @@
             organized thought.
           </p>
           <div class="note-taking-btn">
-            <a href="#home-section" class="note-taking-btn">Try Our App Now</a>
+            <a href={% url "home" %} class="note-taking-btn">Try Our App Now</a>
           </div>
         </div>
         <img src="{% static '\images\About.png' %}" alt="" />
