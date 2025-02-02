@@ -1,57 +1,63 @@
-{% extends 'base.html' %} {% block content %} {% load static %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brightfuture's Note Taking App</title>
+    <link rel="stylesheet" href="{% static 'css/note-app-home.css' %}" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images\favicon.ico' %}"
+      type="image/x-https://loading.io/asset/767819icon"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+            <form action="#" autocomplete="off" class="sign-in-form">
+              <div class="logo">
+                <img src={% static "images/bf-logo-transparent.png" %}
+                alt="brightfuture" />
+              </div>
 
-<style>
-  .button {
-    margin: 0 3px;
-  }
-</style>
+              <div class="heading">
+                <h2>Welcome To BrightFuture's Note Taking App</h2>
+              </div>
 
-<div
-  class="login-content-container container py-4"
-  style="background-color: var(--sky-blyu)"
->
-  <div class="row" style="height: 80%">
-    <div class="login-left-container mx-2 p-1">
-      <div class="image-wrapper">
-        <img
-          src="{% static 'images/logo-transparent.png' %}"
-          alt=""
-          style="width: 400px"
-        />
+              <div class="actual-form">
+                <a href="{% url 'login' %}" class="sign-btn">Log In</a>
+                <a href="{% url 'signup' %}" class="sign-btn">Sign Up</a>
+                <a href="{% url 'base_home' %}" class="sign-btn"
+                  >Back To Home</a
+                >
+
+                <p class="text">
+                  *Note: Select appropriate option from above to proceed
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <div class="carousel">
+            <div class="images-wrapper">
+              <img src={% static "images/image1.png" %} class="image img-1
+              show"/>
+            </div>
+
+            <div class="text-slider">
+              <div class="text-wrap">
+                <div class="text-group">
+                  <h2>Create your own note</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h2
-        class="container-title text-center mt-4"
-        style="font-size: 20px; width: 60%"
-      >
-        Welcome to BrightFuture's Note Taking App, a notetaking platform to help
-        you stay organized on your coding journey.
-      </h2>
-
-      <div class="d-flex mt-4">
-        <a
-          role="btn"
-          class="btn btn-blu me-1 button"
-          style="width: 150px"
-          href="{% url 'login' %}"
-          >Log In</a
-        >
-        <a
-          role="btn"
-          class="btn btn-blu ms-1 button"
-          style="width: 150px"
-          href="{% url 'signup' %}"
-          >Sign Up</a
-        >
-        <a
-          role="btn"
-          class="btn btn-blu ms-1 button"
-          style="width: 150px"
-          href="{% url 'base_home' %}"
-          >Back To Home</a
-        >
-      </div>
-    </div>
-  </div>
-</div>
-
-{% endblock %}
+    </main>
+  </body>
+</html>
