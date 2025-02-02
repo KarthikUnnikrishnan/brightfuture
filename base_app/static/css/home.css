@@ -365,10 +365,25 @@ nav a {
   text-decoration: none;
   color: #ffffff;
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   padding-bottom: 0.125rem;
   transition: color 0.3s ease, border-bottom 0.3s ease;
   border-bottom: 1px solid transparent;
+}
+
+.note-app-link a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #323232;
+  background-color: #fff;
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.note-app-link a:hover {
+  background-color: #2E3532;
+  color: #fff;
 }
 
 nav a:hover {
