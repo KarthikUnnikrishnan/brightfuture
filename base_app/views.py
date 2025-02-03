@@ -68,8 +68,17 @@ def send_email(request):
         name = request.POST['name']
         email = request.POST['email']
         phone = request.POST['phone']
-        message = request.POST['message']
+        Message = request.POST['message']
         subject = f"Enquiry from BrightFuture - {name}"
+        
+        message = f"""
+        Name: {name}
+        Email: {email}
+        Phone: {phone}
+
+        Message:
+        {Message}
+        """
         
         # send email
         send_mail(

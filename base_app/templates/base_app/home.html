@@ -299,7 +299,7 @@
             organized thought.
           </p>
           <div class="note-taking-btn">
-            <a href={% url "home" %} class="note-taking-btn">Try Our App Now</a>
+            <a href={% url "home" %} class="note-taking-btn" target="_blank">Try Our App Now</a>
           </div>
         </div>
         <img src="{% static '\images\note-image-01.png' %}" alt="" />
@@ -432,10 +432,10 @@
                 .getElementById("contact-form")
                 .addEventListener("submit", function (event) {
                   event.preventDefault();
-
+            
                   // Change cursor to wait
                   document.body.style.cursor = "wait";
-
+            
                   // Simulate sending the message (you can replace this with actual AJAX call)
                   const formData = new FormData(this);
                   fetch(this.action, {
@@ -450,6 +450,8 @@
                       document.body.style.cursor = "default";
                       if (response.ok) {
                         alert("Message sent successfully!");
+                        // Clear the form fields
+                        this.reset(); // This will clear all input fields and textarea
                       } else {
                         alert("Failed to send the message. Please try again.");
                       }
