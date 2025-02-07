@@ -176,7 +176,7 @@ class ReferenceCreate(LoginRequiredMixin, CreateView):
 
   def get_success_url(self):
     if self.kwargs:
-      return reverse('detail', kwargs={'collection_id':self.kwargs.get('collection_id')})
+      return reverse('detail', kwargs={'collection_id': self.kwargs.get('collection_id')})
     else:
       return reverse('references_index')
 
@@ -187,7 +187,6 @@ class ReferenceCreate(LoginRequiredMixin, CreateView):
     return context
 
   def form_valid(self, form):
-    
     reference_file = self.request.FILES.get('url', None)
     if reference_file:
       s3 = boto3.client('s3')
@@ -196,24 +195,17 @@ class ReferenceCreate(LoginRequiredMixin, CreateView):
         bucket = os.environ['S3_BUCKET']
         s3.upload_fileobj(reference_file, bucket, key)
         url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
-        name = self.request.POST['name']
-        type = self.request.POST['type']
-        form.instance.url = url 
-        form.instance.name = name
-        form.instance.type = type
-        form.instance.user = self.request.user
+        form.instance.url = url
       except Exception as e:
         print('An error occurred uploading file to S3')
         print(e)
+    form.instance.user = self.request.user  # Ensure the user is set
     response = super(ReferenceCreate, self).form_valid(form)
 
     if self.kwargs.get('collection_id'):
-      collection = Collection.objects.get(id=self.kwargs['collection_id']) 
+      collection = Collection.objects.get(id=self.kwargs['collection_id'])
       collection.references.add(self.object)
       collection.save()
-    else:
-      return response
-
     return response
   
 class ReferenceUpdate(LoginRequiredMixin, UpdateView):
