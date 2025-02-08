@@ -102,8 +102,8 @@ DATABASES = {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'brightfuture',
     'USER': 'postgres',
-    'PASSWORD': 'Karthikadmin',
-    'HOST': 'db-brightfuture-instance.czcuycm0ebuo.eu-north-1.rds.amazonaws.com',
+    'PASSWORD': 'admin',
+    'HOST': 'localhost',
     'PORT': '5432',
   }
 }
