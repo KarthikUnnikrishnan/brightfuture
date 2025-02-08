@@ -13,7 +13,7 @@ if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("navbar").style.margin = "0";
     document.getElementById("navbar").style.borderRadius = "0";
 } else {
-    document.getElementById("navbar").style.margin = "40px 120px";
+    document.getElementById("navbar").style.margin = "30px 80px";
     document.getElementById("navbar").style.borderRadius = "20px";
 }
 }

@@ -227,23 +227,28 @@ class ReferenceUpdate(LoginRequiredMixin, UpdateView):
     return reverse('detail', kwargs={'collection_id':self.kwargs.get('collection_id')})
 
 
-class ReferencePageUpdate(LoginRequiredMixin,UpdateView):
-  model =  Reference
-  fields = ['name','type']
-  template_name = 'main_app/references_update.html'
+class ReferencePageUpdate(LoginRequiredMixin, UpdateView):
+    model = Reference
+    fields = ['name', 'type']
+    template_name = 'main_app/references_update.html'
 
-  def get_context_data(self, **kwargs):
-    context = super().get_context_data(**kwargs)
-    context['references'] = Reference.objects.filter(user=self.request.user)
-    return context
-  
-  def form_valid(self, form):
-    collection = Collection.objects.get(id=self.kwargs['collection_id'])
-    collection.save()
-    return super().form_valid(form)
- 
-  def get_success_url(self):
-    return reverse('references_index')
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['references'] = Reference.objects.filter(user=self.request.user)
+        return context
+
+    def form_valid(self, form):
+        collection_id = self.kwargs.get('collection_id')
+        if collection_id:
+            collection = Collection.objects.get(id=collection_id)
+            collection.save()
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        collection_id = self.kwargs.get('collection_id')
+        if collection_id:
+            return reverse('detail', kwargs={'collection_id': collection_id})
+        return reverse('references_index')
 
 
 class ReferenceDelete(LoginRequiredMixin, DeleteView):
