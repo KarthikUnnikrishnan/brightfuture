@@ -33,6 +33,8 @@ def predict_dropout(request):
             prediction = 0
         elif attendance_status == 0:
             prediction = 0
+        elif tuition_status == 0:
+            prediction = 0
         else:
             # Making prediction
             prediction = predict_model.predict([[attendance_status,tuition_status,first_internal,second_internal]])
