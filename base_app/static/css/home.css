@@ -606,7 +606,7 @@ color: #71c588;
 }
 
 .note-taking-all-text h1 {
-  font-family: "DM Serif Text", serif;
+  font-family: "Dosis", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 75px;
@@ -615,6 +615,7 @@ color: #71c588;
   margin-bottom: 20px;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  line-height: 1.2;
 }
 
 #note-taking-inro-span {
