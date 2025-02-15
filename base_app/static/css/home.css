@@ -384,11 +384,11 @@ nav a {
 .note-app-link a:hover {
   background-color: #2E3532;
   color: #fff;
+  border-bottom: 1px solid #007f39;
 }
 
 nav a:hover {
   color: #a4c868;
-  border-bottom: 1px solid #a4c868;
 }
 
 nav {
@@ -445,7 +445,7 @@ nav {
 }
 
 .home-left-main-title02 {
-  color: #2E3532;
+  color: #423F3E;
   margin-left: 3.125rem;
   margin-bottom: 2.5rem;
   transform-origin: right bottom;
@@ -634,6 +634,13 @@ color: #71c588;
   color: #535353;
   line-height: 30px;
   margin-bottom: 35px;
+}
+
+.note-taking-btn {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
 }
 
 .note-taking-btn a {

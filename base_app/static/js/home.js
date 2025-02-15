@@ -1,3 +1,15 @@
+/* Page loader script */
+
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+  setTimeout(() => {
+      loader.classList.add("loader--hidden");
+      loader.addEventListener("transitionend", () => {
+          document.body.removeChild(loader);
+      });
+  }, 500); // 1500 milliseconds = 1.5 seconds
+  });
+
 /* Navbar expands and shrinking */
 
 window.onload = function() {
@@ -18,17 +30,6 @@ if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
 }
 }
 
-/* Page loader script */
-
-window.addEventListener("load", () => {
-const loader = document.querySelector(".loader");
-setTimeout(() => {
-    loader.classList.add("loader--hidden");
-    loader.addEventListener("transitionend", () => {
-        document.body.removeChild(loader);
-    });
-}, 500); // 1500 milliseconds = 1.5 seconds
-});
 
 /* Contact Us */
 

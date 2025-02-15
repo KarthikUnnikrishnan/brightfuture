@@ -13,6 +13,7 @@
     />
     <!-- Linking CSS -->
     <link rel="stylesheet" href="{% static '\css\dropout.css' %}" />
+    <link rel="stylesheet" href="{% static '\css\home.css' %}" />
     <!-- Linking Remixicons-->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
@@ -117,6 +118,11 @@
         <li><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact Us</a></li>
+        <li class="note-app-link menu-item">
+          <a href="{% url 'home' %}" target="_blank" class="menu-link"
+            >Note Taking App</a
+          >
+        </li>
       </ul>
     </nav>
 

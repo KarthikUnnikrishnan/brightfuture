@@ -65,6 +65,7 @@ def course_recom (request):
 
     return render(request, 'base_app/course_recom.html')
 
+# Mail Function 
 def send_email(request):
     if request.method == 'POST':
         name = request.POST['name']

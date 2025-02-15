@@ -138,7 +138,7 @@
               id="field-of-interest"
               name="field-of-interest"
               placeholder="Enter field of interest"
-              minlength="3"
+              minlength="1"
               required
             />
           </div>
@@ -151,7 +151,7 @@
               id="skills-input"
               name="skills-input"
               placeholder="Enter skills"
-              minlength="3"
+              minlength="1"
               required
             />
           </div>
@@ -164,7 +164,7 @@
               id="current-course-input"
               name="current-course-input"
               placeholder="Enter current course"
-              minlength="3"
+              minlength="1"
             />
           </div>
 
@@ -178,25 +178,21 @@
     <!-- Header and Navbar Started-->
     <nav id="navbar">
       <div class="logo">
-        <a href="#"
-          ><img
-            src="{% static 'images\logo-top.svg' %}"
-            alt="BrightFuture"
-            style="width: 250px; height: auto"
-        /></a>
+        <a href="#">
+          <img src="{% static 'images/logo-top.svg' %}" alt="BrightFuture" style="width: 250px; height: auto" />
+        </a>
       </div>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-        <li class="note-app-link"><a href={% url "home" %} target="_blank">Note Taking App</a></li>
+      <ul class="navbar-links">
+        <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+        <li class="menu-item"><a href="#about" class="menu-link">About</a></li>
+        <li class="menu-item"><a href="#contact" class="menu-link">Contact Us</a></li>
+        <li class="note-app-link menu-item"><a href="{% url 'home' %}" target="_blank" class="menu-link">Note Taking App</a></li>
       </ul>
     </nav>
 
     <!-- Header and Navbar Ended-->
     <!-- Home Section Started-->
-    <section id="home-section">
-      <div class="home-content">
+    <section id="home-section" class="home-content">
         <!-- New wrapper div -->
         <div class="home-left">
           <h1 class="home-left-main-title01">assisting</h1>
@@ -239,7 +235,6 @@
           </p>
           {% endcomment %}
         </div>
-      </div>
     </section>
     <!-- Home Section Ended-->
 
@@ -295,7 +290,7 @@
             organized thought.
           </p>
           <div class="note-taking-btn">
-            <a href={% url "home" %} class="note-taking-btn" target="_blank">Try Our App Now</a>
+            <a href={% url "home" %} class="note-taking-btn" target="_blank">Try Our App Now <i class="ri-arrow-right-up-line"></i></a>
           </div>
         </div>
         <img src="{% static '\images\note-image-01.png' %}" alt="" />
