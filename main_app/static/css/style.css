@@ -52,7 +52,7 @@ a:hover {
 
 .visual-link {
   color: var(--blu-pop-bright);
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .visual-link:hover {
@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5 {
 
 .navbar-brand {
   font-size: 26px;
-  font-family: var(--headings-font);
+  font-family: 'Poppins', sans-serif;
 }
 
 .nav-welcome {
@@ -294,10 +294,13 @@ form * {
 }
 
 .welcome-box > h2 {
+  font-family: 'Poppins', sans-serif;
   font-size: 26px;
 }
 
 .welcome-box > h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
   font-size: 22px;
 }
 
