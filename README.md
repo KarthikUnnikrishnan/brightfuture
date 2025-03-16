@@ -14,4 +14,11 @@ Personalizing the Learning Journey: Our intelligent course recommendation system
 Our solution goes beyond traditional approaches by combining the strengths of cutting-edge machine learning techniques with a user-friendly interface. This allows institutions to easily adopt and implement our system, reaping the benefits of data-driven insights and personalized recommendations.
 By empowering institutions to make data-driven decisions and students to make informed choices, we are shaping the future of higher education. Join us in revolutionizing the way we learn and teach.
 
+# Screenshots
+
 ![alt text](Documentation/Images/Screenshots/Home_01.png)
+![alt text](Documentation/Images/Screenshots/Home_02.png)
+![alt text](Documentation/Images/Screenshots/Home_03.png)
+![alt text](Documentation/Images/Screenshots/Home_04.png)
+![alt text](Documentation/Images/Screenshots/Home_05.png)
+![alt text](Documentation/Images/Screenshots/Home_06.png)
