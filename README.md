@@ -9,11 +9,6 @@ Predicting Student Success: Our sophisticated dropout prediction model, powered 
 
 Personalizing the Learning Journey: Our intelligent course recommendation system, powered by content-based filtering, analyzes student preferences, academic history, and course content to suggest relevant and engaging courses. By tailoring the academic path to individual needs, we empower students to make informed decisions and maximize their potential.
 
-# conclusion
-
-Our solution goes beyond traditional approaches by combining the strengths of cutting-edge machine learning techniques with a user-friendly interface. This allows institutions to easily adopt and implement our system, reaping the benefits of data-driven insights and personalized recommendations.
-By empowering institutions to make data-driven decisions and students to make informed choices, we are shaping the future of higher education. Join us in revolutionizing the way we learn and teach.
-
 # Screenshots
 
 ![alt text](Documentation/Images/Screenshots/Home_01.png)
@@ -22,3 +17,8 @@ By empowering institutions to make data-driven decisions and students to make in
 ![alt text](Documentation/Images/Screenshots/Home_04.png)
 ![alt text](Documentation/Images/Screenshots/Home_05.png)
 ![alt text](Documentation/Images/Screenshots/Home_06.png)
+
+# conclusion
+
+Our solution goes beyond traditional approaches by combining the strengths of cutting-edge machine learning techniques with a user-friendly interface. This allows institutions to easily adopt and implement our system, reaping the benefits of data-driven insights and personalized recommendations.
+By empowering institutions to make data-driven decisions and students to make informed choices, we are shaping the future of higher education. Join us in revolutionizing the way we learn and teach.
