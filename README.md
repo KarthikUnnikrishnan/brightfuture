@@ -16,7 +16,6 @@ Personalizing the Learning Journey: Our intelligent course recommendation system
 ![alt text](Documentation/Images/Screenshots/Home_03.png)
 ![alt text](Documentation/Images/Screenshots/Home_04.png)
 ![alt text](Documentation/Images/Screenshots/Home_05.png)
-![alt text](Documentation/Images/Screenshots/Home_06.png)
 
 # conclusion
 
